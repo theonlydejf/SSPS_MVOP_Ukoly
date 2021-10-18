@@ -10,6 +10,7 @@ namespace Integral
     {
         static void Main(string[] args)
         {
+            // Test gitu
             double start = 0, end = 2;
 
             Func<double, double> func = x => x * x * x;
