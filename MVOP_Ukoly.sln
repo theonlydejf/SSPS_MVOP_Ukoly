@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexOfAll", "IndexOfAll\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringOperations", "StringOperations\StringOperations.csproj", "{E1FA4E5D-DFD4-4F3E-B6D0-4DBF70451829}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex_PhoneNumbersHW", "Regex_PhoneNumbersHW\Regex_PhoneNumbersHW.csproj", "{D00CE487-4206-4495-8C0C-D2B287F762DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{E1FA4E5D-DFD4-4F3E-B6D0-4DBF70451829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1FA4E5D-DFD4-4F3E-B6D0-4DBF70451829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1FA4E5D-DFD4-4F3E-B6D0-4DBF70451829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
