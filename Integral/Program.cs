@@ -8,12 +8,44 @@ namespace Integral
 {
     class Program
     {
+        public delegate double Function(double x);
+
+        public static readonly Tuple<string, Function>[] Functions = 
+        {
+            new Tuple<string, Function>("y = sin(x)", x => Math.Sin(x)),
+            new Tuple<string, Function>("y = x^cos(x)", x => Math.Pow(x, Math.Cos(x))),
+            new Tuple<string, Function>("y = x^2", x => x * x),
+            new Tuple<string, Function>("y = x^3", x => x * x * x),
+            new Tuple<string, Function>("y = 3 / (x + 1)", x => 3 / (x + 1))
+        };
+
         static void Main(string[] args)
         {
             // Test gitu
             double start = 0, end = 2;
 
-            Func<double, double> func = x => x * x * x;
+            Function func;
+
+            while(true)
+            {
+                for (int i = 0; i < Functions.Length; i++)
+                    Console.WriteLine($"{ i }: { Functions[i].Item1 }");
+                Console.Write("Enter index of desired function: ");
+                try
+                {
+                    func = Functions[Convert.ToInt32(Console.ReadLine())].Item2;
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("You entered an unsopported number!");
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    Console.WriteLine("You enterd number that's out of range!");
+                }
+            }
+
             double resolutionStart = 1e-2, resolutionStepDown = 1e1, resolutionEnd = 1e-4;
             List<double> results = new List<double>();
             for (double resolution = resolutionStart; resolution >= resolutionEnd; resolution /= resolutionStepDown)

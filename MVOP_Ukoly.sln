@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringOperations", "StringO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex_PhoneNumbersHW", "Regex_PhoneNumbersHW\Regex_PhoneNumbersHW.csproj", "{D00CE487-4206-4495-8C0C-D2B287F762DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorfismus", "Polymorfismus\Polymorfismus.csproj", "{8817512E-2FFD-483F-A9E4-BE35EFDBB6F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Geometry\Geometry.csproj", "{98067C1D-14D4-4E9F-B4A4-851D2D55421B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D00CE487-4206-4495-8C0C-D2B287F762DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8817512E-2FFD-483F-A9E4-BE35EFDBB6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8817512E-2FFD-483F-A9E4-BE35EFDBB6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8817512E-2FFD-483F-A9E4-BE35EFDBB6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8817512E-2FFD-483F-A9E4-BE35EFDBB6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98067C1D-14D4-4E9F-B4A4-851D2D55421B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98067C1D-14D4-4E9F-B4A4-851D2D55421B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98067C1D-14D4-4E9F-B4A4-851D2D55421B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98067C1D-14D4-4E9F-B4A4-851D2D55421B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
