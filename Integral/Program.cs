@@ -46,6 +46,25 @@ namespace Integral
                 }
             }
 
+            while(true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter start");
+                    start = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter end");
+                    end = Convert.ToDouble(Console.ReadLine());
+                    if (start > end)
+                        Console.WriteLine("Start cannot be bigger than end");
+                    else
+                        break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("You entered an unsopported number!");
+                }
+            }
+
             double resolutionStart = 1e-2, resolutionStepDown = 1e1, resolutionEnd = 1e-4;
             List<double> results = new List<double>();
             for (double resolution = resolutionStart; resolution >= resolutionEnd; resolution /= resolutionStepDown)
