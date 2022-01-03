@@ -1,0 +1,267 @@
+\hypertarget{class_simulation_1_1_dynamic_world_point}{}\doxysection{Simulation.\+Dynamic\+World\+Point Class Reference}
+\label{class_simulation_1_1_dynamic_world_point}\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+
+
+A point in a world that can move. That means this object is also defined by \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}}, current \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} and its \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}}  
+
+
+Inheritance diagram for Simulation.\+Dynamic\+World\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulation_1_1_dynamic_world_point}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_ac5e35676a17a44de62f64bfc4f06f9c1}{Dynamic\+World\+Point}} (\mbox{\hyperlink{class_simulation_1_1_world}{World}} world, Vector2 location, float mass)
+\begin{DoxyCompactList}\small\item\em Creates an instance of \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{Dynamic\+World\+Point}} and binds it with a specific \mbox{\hyperlink{class_simulation_1_1_world}{World}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a575612461df2e95732d90a7f23592a6d}{Dynamic\+World\+Point}} (\mbox{\hyperlink{class_simulation_1_1_world}{World}} world, Vector2 location, float mass, Vector2 velocity)
+\begin{DoxyCompactList}\small\item\em Creates an instance of \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{Dynamic\+World\+Point}} with a specififc starting velocity and binds it with a specific \mbox{\hyperlink{class_simulation_1_1_world}{World}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a7d32f665733ca563192ce5b61768765d}{Start\+Applying\+Force}} (Vector2 force)
+\begin{DoxyCompactList}\small\item\em Starts applying a force to the point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a9250fc5d0330558ed495360790a2b6cb}{Stop\+Applying\+Force}} ()
+\begin{DoxyCompactList}\small\item\em Stops all forces, that are currently being applied on the point \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a82c257cf082aad31a257efbfafe4a92d}{Clone\+To\+World}} (\mbox{\hyperlink{class_simulation_1_1_world}{World}} world)
+\begin{DoxyCompactList}\small\item\em Clones this world object to a different instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} and binds it to that world \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aa7346fe436980e5235b53fa49a353b1e}{Step}} (object sender, \mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}} e)
+\begin{DoxyCompactList}\small\item\em A method which is called when a step is being taken \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A vector defining current acceleration and direction, at which the point is accelerating \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A vector defining the points speed and direction in which it is travelling \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A mass of the point \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a4ce40dc62ea92d54de907963c3327f17}{Speed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A speed at which the point is travelling \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8bd7471eb835e89f06519541d0a9800c}{Direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A direction at wihch the point is travelling \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A point in a world that can move. That means this object is also defined by \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}}, current \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} and its \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}} 
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_ac5e35676a17a44de62f64bfc4f06f9c1}\label{class_simulation_1_1_dynamic_world_point_ac5e35676a17a44de62f64bfc4f06f9c1}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!DynamicWorldPoint@{DynamicWorldPoint}}
+\index{DynamicWorldPoint@{DynamicWorldPoint}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{DynamicWorldPoint()}{DynamicWorldPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Simulation.\+Dynamic\+World\+Point.\+Dynamic\+World\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_world}{World}}}]{world,  }\item[{Vector2}]{location,  }\item[{float}]{mass }\end{DoxyParamCaption})}
+
+
+
+Creates an instance of \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{Dynamic\+World\+Point}} and binds it with a specific \mbox{\hyperlink{class_simulation_1_1_world}{World}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & An instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} in which the point exists and is bound to\\
+\hline
+{\em location} & The location in relation to the origin in the \mbox{\hyperlink{class_simulation_1_1_world}{World}} that the point is bound to\\
+\hline
+{\em mass} & The mass of the point\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a575612461df2e95732d90a7f23592a6d}\label{class_simulation_1_1_dynamic_world_point_a575612461df2e95732d90a7f23592a6d}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!DynamicWorldPoint@{DynamicWorldPoint}}
+\index{DynamicWorldPoint@{DynamicWorldPoint}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{DynamicWorldPoint()}{DynamicWorldPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Simulation.\+Dynamic\+World\+Point.\+Dynamic\+World\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_world}{World}}}]{world,  }\item[{Vector2}]{location,  }\item[{float}]{mass,  }\item[{Vector2}]{velocity }\end{DoxyParamCaption})}
+
+
+
+Creates an instance of \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{Dynamic\+World\+Point}} with a specififc starting velocity and binds it with a specific \mbox{\hyperlink{class_simulation_1_1_world}{World}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & An instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} in which the point exists and is bound to\\
+\hline
+{\em location} & The location in relation to the origin in the \mbox{\hyperlink{class_simulation_1_1_world}{World}} that the point is bound to\\
+\hline
+{\em mass} & The mass of the point\\
+\hline
+{\em velocity} & A vector defining the points speed and direction in which it is travelling\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a82c257cf082aad31a257efbfafe4a92d}\label{class_simulation_1_1_dynamic_world_point_a82c257cf082aad31a257efbfafe4a92d}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!CloneToWorld@{CloneToWorld}}
+\index{CloneToWorld@{CloneToWorld}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{CloneToWorld()}{CloneToWorld()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}} Simulation.\+Dynamic\+World\+Point.\+Clone\+To\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_world}{World}}}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clones this world object to a different instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} and binds it to that world 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & An instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} the object is being cloned to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A cloned instance of \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a8ebac64bd7f0992c1e95e2d527ee43f7}{Simulation.\+World.\+Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a7d32f665733ca563192ce5b61768765d}\label{class_simulation_1_1_dynamic_world_point_a7d32f665733ca563192ce5b61768765d}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!StartApplyingForce@{StartApplyingForce}}
+\index{StartApplyingForce@{StartApplyingForce}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{StartApplyingForce()}{StartApplyingForce()}}
+{\footnotesize\ttfamily void Simulation.\+Dynamic\+World\+Point.\+Start\+Applying\+Force (\begin{DoxyParamCaption}\item[{Vector2}]{force }\end{DoxyParamCaption})}
+
+
+
+Starts applying a force to the point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & A vector defining a force and a direction in which it is applied\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_aa7346fe436980e5235b53fa49a353b1e}\label{class_simulation_1_1_dynamic_world_point_aa7346fe436980e5235b53fa49a353b1e}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!Step@{Step}}
+\index{Step@{Step}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{Step()}{Step()}}
+{\footnotesize\ttfamily override void Simulation.\+Dynamic\+World\+Point.\+Step (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+A method which is called when a step is being taken 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object that invoked the step\\
+\hline
+{\em e} & Instance of \mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}} describing the step\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}{Simulation.\+World.\+Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00080}{80}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a9250fc5d0330558ed495360790a2b6cb}\label{class_simulation_1_1_dynamic_world_point_a9250fc5d0330558ed495360790a2b6cb}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!StopApplyingForce@{StopApplyingForce}}
+\index{StopApplyingForce@{StopApplyingForce}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{StopApplyingForce()}{StopApplyingForce()}}
+{\footnotesize\ttfamily void Simulation.\+Dynamic\+World\+Point.\+Stop\+Applying\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops all forces, that are currently being applied on the point 
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00068}{68}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}\label{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!Acceleration@{Acceleration}}
+\index{Acceleration@{Acceleration}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{Acceleration}{Acceleration}}
+{\footnotesize\ttfamily Vector2 Simulation.\+Dynamic\+World\+Point.\+Acceleration\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A vector defining current acceleration and direction, at which the point is accelerating 
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a8bd7471eb835e89f06519541d0a9800c}\label{class_simulation_1_1_dynamic_world_point_a8bd7471eb835e89f06519541d0a9800c}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!Direction@{Direction}}
+\index{Direction@{Direction}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily double Simulation.\+Dynamic\+World\+Point.\+Direction\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A direction at wihch the point is travelling 
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}\label{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!Mass@{Mass}}
+\index{Mass@{Mass}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{Mass}{Mass}}
+{\footnotesize\ttfamily float Simulation.\+Dynamic\+World\+Point.\+Mass\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A mass of the point 
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a4ce40dc62ea92d54de907963c3327f17}\label{class_simulation_1_1_dynamic_world_point_a4ce40dc62ea92d54de907963c3327f17}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!Speed@{Speed}}
+\index{Speed@{Speed}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{Speed}{Speed}}
+{\footnotesize\ttfamily float Simulation.\+Dynamic\+World\+Point.\+Speed\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A speed at which the point is travelling 
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}\label{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}} 
+\index{Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!Simulation.DynamicWorldPoint@{Simulation.DynamicWorldPoint}}
+\doxysubsubsection{\texorpdfstring{Velocity}{Velocity}}
+{\footnotesize\ttfamily Vector2 Simulation.\+Dynamic\+World\+Point.\+Velocity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A vector defining the points speed and direction in which it is travelling 
+
+
+
+Definition at line \mbox{\hyperlink{_dynamic_world_object_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_dynamic_world_object_8cs_source}{Dynamic\+World\+Object.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dynamic_world_object_8cs}{Dynamic\+World\+Object.\+cs}}\end{DoxyCompactItemize}

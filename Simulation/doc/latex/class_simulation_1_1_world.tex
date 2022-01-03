@@ -1,0 +1,169 @@
+\hypertarget{class_simulation_1_1_world}{}\doxysection{Simulation.\+World Class Reference}
+\label{class_simulation_1_1_world}\index{Simulation.World@{Simulation.World}}
+
+
+An object used to hold world objects(see \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}})  
+
+
+Inheritance diagram for Simulation.\+World\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulation_1_1_world}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}}
+\begin{DoxyCompactList}\small\item\em Abstract class used to define a world object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}{Step\+Event\+Handler}} (object sender, \mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}} e)
+\begin{DoxyCompactList}\small\item\em Handler used to handle a step event \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_simulation_1_1_world_ab5f6bc027915efa78e795ca1e17bdf8d}{World}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new world \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_1_1_world_afe0a8ded5e02bd2141238d265ac92243}{Do\+Step}} (Time\+Span delta\+Time)
+\begin{DoxyCompactList}\small\item\em Takes a simulation step \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_simulation_1_1_world_aa1b0b80af037cedf67a54aad624a9199}{Clone}} ()
+\item 
+\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_world_a2df0b32df6703dadf69d404f54f6d3aa}{Find\+Object}} (Guid id)
+\begin{DoxyCompactList}\small\item\em Find a objects by its ID \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_world_a28f3775efd6d361cb26d5ead6b75e161}{Get\+Object\+By\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets object by its index. Indexes are being asigned by order the objects were binded to the world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}{Step\+Event\+Handler}} \mbox{\hyperlink{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}{Step}}
+\begin{DoxyCompactList}\small\item\em Event, which gets invoked when a new step is being taken \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An object used to hold world objects(see \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}) 
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_world_ab5f6bc027915efa78e795ca1e17bdf8d}\label{class_simulation_1_1_world_ab5f6bc027915efa78e795ca1e17bdf8d}} 
+\index{Simulation.World@{Simulation.World}!World@{World}}
+\index{World@{World}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily Simulation.\+World.\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new world 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_world_aa1b0b80af037cedf67a54aad624a9199}\label{class_simulation_1_1_world_aa1b0b80af037cedf67a54aad624a9199}} 
+\index{Simulation.World@{Simulation.World}!Clone@{Clone}}
+\index{Clone@{Clone}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily object Simulation.\+World.\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_world_afe0a8ded5e02bd2141238d265ac92243}\label{class_simulation_1_1_world_afe0a8ded5e02bd2141238d265ac92243}} 
+\index{Simulation.World@{Simulation.World}!DoStep@{DoStep}}
+\index{DoStep@{DoStep}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{DoStep()}{DoStep()}}
+{\footnotesize\ttfamily void Simulation.\+World.\+Do\+Step (\begin{DoxyParamCaption}\item[{Time\+Span}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Takes a simulation step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & A time between this step and a previous step\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_world_a2df0b32df6703dadf69d404f54f6d3aa}\label{class_simulation_1_1_world_a2df0b32df6703dadf69d404f54f6d3aa}} 
+\index{Simulation.World@{Simulation.World}!FindObject@{FindObject}}
+\index{FindObject@{FindObject}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{FindObject()}{FindObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} Simulation.\+World.\+Find\+Object (\begin{DoxyParamCaption}\item[{Guid}]{id }\end{DoxyParamCaption})}
+
+
+
+Find a objects by its ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the object from this world
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_1_1_world_a28f3775efd6d361cb26d5ead6b75e161}\label{class_simulation_1_1_world_a28f3775efd6d361cb26d5ead6b75e161}} 
+\index{Simulation.World@{Simulation.World}!GetObjectByIndex@{GetObjectByIndex}}
+\index{GetObjectByIndex@{GetObjectByIndex}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{GetObjectByIndex()}{GetObjectByIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} Simulation.\+World.\+Get\+Object\+By\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets object by its index. Indexes are being asigned by order the objects were binded to the world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}\label{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}} 
+\index{Simulation.World@{Simulation.World}!StepEventHandler@{StepEventHandler}}
+\index{StepEventHandler@{StepEventHandler}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{StepEventHandler()}{StepEventHandler()}}
+{\footnotesize\ttfamily delegate void Simulation.\+World.\+Step\+Event\+Handler (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Handler used to handle a step event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} that invoked the step\\
+\hline
+{\em e} & Instance of \mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}} describing the step\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}\label{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}} 
+\index{Simulation.World@{Simulation.World}!Step@{Step}}
+\index{Step@{Step}!Simulation.World@{Simulation.World}}
+\doxysubsubsection{\texorpdfstring{Step}{Step}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}{Step\+Event\+Handler}} Simulation.\+World.\+Step}
+
+
+
+Event, which gets invoked when a new step is being taken 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_world_8cs}{World.\+cs}}\end{DoxyCompactItemize}

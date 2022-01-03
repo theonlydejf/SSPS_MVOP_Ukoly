@@ -1,0 +1,145 @@
+\hypertarget{class_simulation_1_1_world_1_1_object}{}\doxysection{Simulation.\+World.\+Object Class Reference}
+\label{class_simulation_1_1_world_1_1_object}\index{Simulation.World.Object@{Simulation.World.Object}}
+
+
+Abstract class used to define a world object  
+
+
+Inheritance diagram for Simulation.\+World.\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulation_1_1_world_1_1_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_1_1_world_1_1_object_afb89df7e245f91e69f04a6aaaae6526d}{Object}} (\mbox{\hyperlink{class_simulation_1_1_world}{World}} world, Vector2 location)
+\begin{DoxyCompactList}\small\item\em Creates instance of a world object \end{DoxyCompactList}\item 
+abstract \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a8ebac64bd7f0992c1e95e2d527ee43f7}{Clone\+To\+World}} (\mbox{\hyperlink{class_simulation_1_1_world}{World}} world)
+\begin{DoxyCompactList}\small\item\em Clones this world object to a different instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} and binds it to that world \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}{Step}} (object sender, \mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}} e)
+\begin{DoxyCompactList}\small\item\em A method which is called when a step is being taken \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}{Location}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The location in relation to the origin \end{DoxyCompactList}\item 
+Guid \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a2ad636976b7f1b5ed473ffe864105b8d}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A unique ID od the world object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class used to define a world object 
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_world_1_1_object_afb89df7e245f91e69f04a6aaaae6526d}\label{class_simulation_1_1_world_1_1_object_afb89df7e245f91e69f04a6aaaae6526d}} 
+\index{Simulation.World.Object@{Simulation.World.Object}!Object@{Object}}
+\index{Object@{Object}!Simulation.World.Object@{Simulation.World.Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Simulation.\+World.\+Object.\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_world}{World}}}]{world,  }\item[{Vector2}]{location }\end{DoxyParamCaption})}
+
+
+
+Creates instance of a world object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & An instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} in which the point exists and is bound to\\
+\hline
+{\em location} & The location in relation to the origin\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_world_1_1_object_a8ebac64bd7f0992c1e95e2d527ee43f7}\label{class_simulation_1_1_world_1_1_object_a8ebac64bd7f0992c1e95e2d527ee43f7}} 
+\index{Simulation.World.Object@{Simulation.World.Object}!CloneToWorld@{CloneToWorld}}
+\index{CloneToWorld@{CloneToWorld}!Simulation.World.Object@{Simulation.World.Object}}
+\doxysubsubsection{\texorpdfstring{CloneToWorld()}{CloneToWorld()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} Simulation.\+World.\+Object.\+Clone\+To\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_world}{World}}}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Clones this world object to a different instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} and binds it to that world 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & An instance of \mbox{\hyperlink{class_simulation_1_1_world}{World}} the object is being cloned to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A cloned instance of \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a82c257cf082aad31a257efbfafe4a92d}{Simulation.\+Dynamic\+World\+Point}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}\label{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}} 
+\index{Simulation.World.Object@{Simulation.World.Object}!Step@{Step}}
+\index{Step@{Step}!Simulation.World.Object@{Simulation.World.Object}}
+\doxysubsubsection{\texorpdfstring{Step()}{Step()}}
+{\footnotesize\ttfamily abstract void Simulation.\+World.\+Object.\+Step (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+A method which is called when a step is being taken 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} that invoked the step\\
+\hline
+{\em e} & Instance of \mbox{\hyperlink{class_simulation_1_1_step_event_args}{Step\+Event\+Args}} describing the step\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aa7346fe436980e5235b53fa49a353b1e}{Simulation.\+Dynamic\+World\+Point}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_world_1_1_object_a2ad636976b7f1b5ed473ffe864105b8d}\label{class_simulation_1_1_world_1_1_object_a2ad636976b7f1b5ed473ffe864105b8d}} 
+\index{Simulation.World.Object@{Simulation.World.Object}!ID@{ID}}
+\index{ID@{ID}!Simulation.World.Object@{Simulation.World.Object}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily Guid Simulation.\+World.\+Object.\+ID\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A unique ID od the world object 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}\label{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}} 
+\index{Simulation.World.Object@{Simulation.World.Object}!Location@{Location}}
+\index{Location@{Location}!Simulation.World.Object@{Simulation.World.Object}}
+\doxysubsubsection{\texorpdfstring{Location}{Location}}
+{\footnotesize\ttfamily Vector2 Simulation.\+World.\+Object.\+Location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The location in relation to the origin 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8cs_source_l00084}{84}} of file \mbox{\hyperlink{_world_8cs_source}{World.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_world_8cs}{World.\+cs}}\end{DoxyCompactItemize}

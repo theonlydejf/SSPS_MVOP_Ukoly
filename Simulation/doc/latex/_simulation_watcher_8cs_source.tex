@@ -1,0 +1,23 @@
+\hypertarget{_simulation_watcher_8cs_source}{}\doxysection{Simulation\+Watcher.\+cs}
+\mbox{\hyperlink{_simulation_watcher_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00009}\mbox{\hyperlink{class_simulation_1_1_simulation_watcher}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{class_simulation_1_1_simulation_watcher}{SimulationWatcher}} : IDisposable}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00015}\mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ab22c65bc3219b6be20179987cf413699}{00015}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ab22c65bc3219b6be20179987cf413699}{SimulationWatcher}}(\mbox{\hyperlink{namespace_simulation}{Simulation}} simulation)}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00016}00016         \{}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00017}00017             simulation.Stepped += \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}{Simulation\_Stepped}};}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00018}00018             this.simulation = simulation;}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00019}00019         \}}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00024}00024         \textcolor{keyword}{private} readonly \mbox{\hyperlink{namespace_simulation}{Simulation}} simulation;}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00031}\mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}{00031}}         \textcolor{keyword}{protected} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}{Simulation\_Stepped}}(\textcolor{keywordtype}{object} sender, \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{SteppedEventArgs}} e);}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00036}\mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad900ee19baf68855706a970c02d2117e}{00036}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad900ee19baf68855706a970c02d2117e}{Dispose}}() => simulation.Stepped -\/= \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}{Simulation\_Stepped}};}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_simulation_watcher_8cs_source_l00038}00038 \}}
+
+\end{DoxyCode}

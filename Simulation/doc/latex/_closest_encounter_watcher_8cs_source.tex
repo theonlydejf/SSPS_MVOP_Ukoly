@@ -1,0 +1,58 @@
+\hypertarget{_closest_encounter_watcher_8cs_source}{}\doxysection{Closest\+Encounter\+Watcher.\+cs}
+\mbox{\hyperlink{_closest_encounter_watcher_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00003}\mbox{\hyperlink{namespace_simulation}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00008}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher}{00008}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher}{ClosestEncounterWatcher}} : \mbox{\hyperlink{class_simulation_1_1_simulation_watcher}{SimulationWatcher}}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00009}00009     \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00013}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aba24f03924cb7816eb3183103746a5b7}{00013}}         \textcolor{keyword}{public} \textcolor{keyword}{static} readonly ShortestDistanceFinderSettings \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aba24f03924cb7816eb3183103746a5b7}{DEFAULT\_SETTINGS}} = \textcolor{keyword}{new} ShortestDistanceFinderSettings()}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00014}00014         \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00015}00015             AutoStopSimulation = \textcolor{keyword}{false}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00016}00016         \};}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00024}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a523481e6441c389507c560e9f6327553}{00024}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a523481e6441c389507c560e9f6327553}{ClosestEncounterWatcher}}(\mbox{\hyperlink{namespace_simulation}{Simulation}} simulation, \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} obj1, \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} obj2) : this(simulation, obj1, obj2, \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aba24f03924cb7816eb3183103746a5b7}{DEFAULT\_SETTINGS}})}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00025}00025         \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00035}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6e659c02956e0316c8e25f13b2192a91}{00035}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6e659c02956e0316c8e25f13b2192a91}{ClosestEncounterWatcher}}(\mbox{\hyperlink{namespace_simulation}{Simulation}} simulation, \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} obj1, \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} obj2, ShortestDistanceFinderSettings settings) : base(simulation)}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00037}00037             this.settings = settings;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00038}00038             this.obj1 = obj1;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00039}00039             this.obj2 = obj2;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00045}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aa8b5cf5e5ad8097f72b0cbf0156ef7c8}{00045}}         \textcolor{keyword}{public} \mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}} \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aa8b5cf5e5ad8097f72b0cbf0156ef7c8}{CurrentClosestEncounter}} => closestEncounter;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00046}00046         \textcolor{keyword}{private} \mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}} closestEncounter = \mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}}.\mbox{\hyperlink{struct_simulation_1_1_encounter_ac3a8eceb7051e1d22c80fb029bc76ba9}{NULL}};}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00048}00048         \textcolor{keyword}{private} ShortestDistanceFinderSettings settings;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00049}00049         \textcolor{keyword}{private} \textcolor{keywordtype}{float} lastDistance = \textcolor{keywordtype}{float}.PositiveInfinity;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00050}00050         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} obj1;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00051}00051         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} obj2;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00056}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a08e34728d41c2d33dd5832154f8f4153}{00056}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a08e34728d41c2d33dd5832154f8f4153}{ResetClosestEncounter}}() => closestEncounter = \mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}}.\mbox{\hyperlink{struct_simulation_1_1_encounter_ac3a8eceb7051e1d22c80fb029bc76ba9}{NULL}};}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00058}\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6f4e02cf33229963c94399dd05a5809e}{00058}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6f4e02cf33229963c94399dd05a5809e}{Simulation\_Stepped}}(\textcolor{keywordtype}{object} sender, \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{SteppedEventArgs}} e)}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00059}00059         \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00060}00060             \textcolor{keywordtype}{float} distance = (obj1.Location -\/ obj2.Location).Length();}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00062}00062             \textcolor{comment}{// If the distance between objects is closer than anytime before -\/> record the encounter}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00063}00063             \textcolor{keywordflow}{if} (distance < closestEncounter.\mbox{\hyperlink{struct_simulation_1_1_encounter_ad6416c02d387c6e2072e2ea959e91406}{Distance}})}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00064}00064                 closestEncounter = \textcolor{keyword}{new} \mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}}()}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00065}00065                 \{}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00066}00066                     Distance = distance,}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00067}00067                     Timestamp = e.\mbox{\hyperlink{class_simulation_1_1_stepped_event_args_ab085d99c781df56bbe3559a92555b5cb}{TimeSinceEpoch}},}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00068}00068                     WorldSnapshot = e.\mbox{\hyperlink{class_simulation_1_1_stepped_event_args_a8039d4b0ef5d9fe6630e6582600c6ecd}{WorldSnapshot}}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00069}00069                 \};}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00071}00071             \textcolor{comment}{// When objects are starting to move away and settings allow it –> stop the simulation}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00072}00072             \textcolor{keywordflow}{if} (settings.AutoStopSimulation \&\& distance > lastDistance)}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00073}00073                 simulation.StopSimulation();}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00075}00075             lastDistance = distance;}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00076}00076         \}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_closest_encounter_watcher_8cs_source_l00078}00078 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,180 @@
+\hypertarget{class_simulation_1_1_closest_encounter_watcher}{}\doxysection{Simulation.\+Closest\+Encounter\+Watcher Class Reference}
+\label{class_simulation_1_1_closest_encounter_watcher}\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+
+
+A class that looks for a closest encounter of two objects in a simulation  
+
+
+Inheritance diagram for Simulation.\+Closest\+Encounter\+Watcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_simulation_1_1_closest_encounter_watcher}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a523481e6441c389507c560e9f6327553}{Closest\+Encounter\+Watcher}} (\mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}} simulation, \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}} obj1, \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}} obj2)
+\begin{DoxyCompactList}\small\item\em Creates an instance of \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher}{Closest\+Encounter\+Watcher}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6e659c02956e0316c8e25f13b2192a91}{Closest\+Encounter\+Watcher}} (\mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}} simulation, \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}} obj1, \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}} obj2, Shortest\+Distance\+Finder\+Settings settings)
+\begin{DoxyCompactList}\small\item\em Creates an instance of \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher}{Closest\+Encounter\+Watcher}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a08e34728d41c2d33dd5832154f8f4153}{Reset\+Closest\+Encounter}} ()
+\begin{DoxyCompactList}\small\item\em Discards the current closest encounter and starts looking for a new one \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Shortest\+Distance\+Finder\+Settings \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aba24f03924cb7816eb3183103746a5b7}{DEFAULT\+\_\+\+SETTINGS}}
+\begin{DoxyCompactList}\small\item\em The default settings \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6f4e02cf33229963c94399dd05a5809e}{Simulation\+\_\+\+Stepped}} (object sender, \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{Stepped\+Event\+Args}} e)
+\begin{DoxyCompactList}\small\item\em Gets invoked after every step in the watched simulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}} \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_aa8b5cf5e5ad8097f72b0cbf0156ef7c8}{Current\+Closest\+Encounter}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Latest recorded closest encounter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that looks for a closest encounter of two objects in a simulation 
+
+Definition at line \mbox{\hyperlink{_closest_encounter_watcher_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_closest_encounter_watcher_8cs_source}{Closest\+Encounter\+Watcher.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_closest_encounter_watcher_a523481e6441c389507c560e9f6327553}\label{class_simulation_1_1_closest_encounter_watcher_a523481e6441c389507c560e9f6327553}} 
+\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}!ClosestEncounterWatcher@{ClosestEncounterWatcher}}
+\index{ClosestEncounterWatcher@{ClosestEncounterWatcher}!Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+\doxysubsubsection{\texorpdfstring{ClosestEncounterWatcher()}{ClosestEncounterWatcher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Simulation.\+Closest\+Encounter\+Watcher.\+Closest\+Encounter\+Watcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}}}]{simulation,  }\item[{\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}}]{obj1,  }\item[{\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}}]{obj2 }\end{DoxyParamCaption})}
+
+
+
+Creates an instance of \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher}{Closest\+Encounter\+Watcher}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & The simulation on which the watcher should work\\
+\hline
+{\em obj1} & The first object which the watcher should watch\\
+\hline
+{\em obj2} & The second object which the watcher should watch\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_closest_encounter_watcher_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_closest_encounter_watcher_8cs_source}{Closest\+Encounter\+Watcher.\+cs}}.
+
+\mbox{\Hypertarget{class_simulation_1_1_closest_encounter_watcher_a6e659c02956e0316c8e25f13b2192a91}\label{class_simulation_1_1_closest_encounter_watcher_a6e659c02956e0316c8e25f13b2192a91}} 
+\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}!ClosestEncounterWatcher@{ClosestEncounterWatcher}}
+\index{ClosestEncounterWatcher@{ClosestEncounterWatcher}!Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+\doxysubsubsection{\texorpdfstring{ClosestEncounterWatcher()}{ClosestEncounterWatcher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Simulation.\+Closest\+Encounter\+Watcher.\+Closest\+Encounter\+Watcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}}}]{simulation,  }\item[{\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}}]{obj1,  }\item[{\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{World.\+Object}}}]{obj2,  }\item[{Shortest\+Distance\+Finder\+Settings}]{settings }\end{DoxyParamCaption})}
+
+
+
+Creates an instance of \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher}{Closest\+Encounter\+Watcher}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & The simulation on which the watcher should work\\
+\hline
+{\em obj1} & The first object which the watcher should watch\\
+\hline
+{\em obj2} & The second object which the watcher should watch\\
+\hline
+{\em settings} & Settings defining how the watcher should act\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_closest_encounter_watcher_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_closest_encounter_watcher_8cs_source}{Closest\+Encounter\+Watcher.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_closest_encounter_watcher_a08e34728d41c2d33dd5832154f8f4153}\label{class_simulation_1_1_closest_encounter_watcher_a08e34728d41c2d33dd5832154f8f4153}} 
+\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}!ResetClosestEncounter@{ResetClosestEncounter}}
+\index{ResetClosestEncounter@{ResetClosestEncounter}!Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+\doxysubsubsection{\texorpdfstring{ResetClosestEncounter()}{ResetClosestEncounter()}}
+{\footnotesize\ttfamily void Simulation.\+Closest\+Encounter\+Watcher.\+Reset\+Closest\+Encounter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Discards the current closest encounter and starts looking for a new one 
+
+\mbox{\Hypertarget{class_simulation_1_1_closest_encounter_watcher_a6f4e02cf33229963c94399dd05a5809e}\label{class_simulation_1_1_closest_encounter_watcher_a6f4e02cf33229963c94399dd05a5809e}} 
+\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}!Simulation\_Stepped@{Simulation\_Stepped}}
+\index{Simulation\_Stepped@{Simulation\_Stepped}!Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+\doxysubsubsection{\texorpdfstring{Simulation\_Stepped()}{Simulation\_Stepped()}}
+{\footnotesize\ttfamily override void Simulation.\+Closest\+Encounter\+Watcher.\+Simulation\+\_\+\+Stepped (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{Stepped\+Event\+Args}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets invoked after every step in the watched simulation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Instance of the object that invoked the step\\
+\hline
+{\em e} & Instance of \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{Stepped\+Event\+Args}} describing the state of the simulated world after the step\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}{Simulation.\+Simulation\+Watcher}}.
+
+
+
+Definition at line \mbox{\hyperlink{_closest_encounter_watcher_8cs_source_l00058}{58}} of file \mbox{\hyperlink{_closest_encounter_watcher_8cs_source}{Closest\+Encounter\+Watcher.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_closest_encounter_watcher_aba24f03924cb7816eb3183103746a5b7}\label{class_simulation_1_1_closest_encounter_watcher_aba24f03924cb7816eb3183103746a5b7}} 
+\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}!DEFAULT\_SETTINGS@{DEFAULT\_SETTINGS}}
+\index{DEFAULT\_SETTINGS@{DEFAULT\_SETTINGS}!Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SETTINGS}{DEFAULT\_SETTINGS}}
+{\footnotesize\ttfamily readonly Shortest\+Distance\+Finder\+Settings Simulation.\+Closest\+Encounter\+Watcher.\+DEFAULT\+\_\+\+SETTINGS\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} ShortestDistanceFinderSettings()}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            AutoStopSimulation = \textcolor{keyword}{false}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+The default settings 
+
+
+
+Definition at line \mbox{\hyperlink{_closest_encounter_watcher_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_closest_encounter_watcher_8cs_source}{Closest\+Encounter\+Watcher.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_closest_encounter_watcher_aa8b5cf5e5ad8097f72b0cbf0156ef7c8}\label{class_simulation_1_1_closest_encounter_watcher_aa8b5cf5e5ad8097f72b0cbf0156ef7c8}} 
+\index{Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}!CurrentClosestEncounter@{CurrentClosestEncounter}}
+\index{CurrentClosestEncounter@{CurrentClosestEncounter}!Simulation.ClosestEncounterWatcher@{Simulation.ClosestEncounterWatcher}}
+\doxysubsubsection{\texorpdfstring{CurrentClosestEncounter}{CurrentClosestEncounter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_simulation_1_1_encounter}{Encounter}} Simulation.\+Closest\+Encounter\+Watcher.\+Current\+Closest\+Encounter\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Latest recorded closest encounter 
+
+
+
+Definition at line \mbox{\hyperlink{_closest_encounter_watcher_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_closest_encounter_watcher_8cs_source}{Closest\+Encounter\+Watcher.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_closest_encounter_watcher_8cs}{Closest\+Encounter\+Watcher.\+cs}}\end{DoxyCompactItemize}

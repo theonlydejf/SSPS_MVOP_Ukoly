@@ -1,0 +1,61 @@
+\hypertarget{_world_8cs_source}{}\doxysection{World.\+cs}
+\mbox{\hyperlink{_world_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00010}\mbox{\hyperlink{class_simulation_1_1_world}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_simulation_1_1_world}{World}} : ICloneable}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00017}\mbox{\hyperlink{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}{00017}}         \textcolor{keyword}{public} delegate \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}{StepEventHandler}}(\textcolor{keywordtype}{object} sender, \mbox{\hyperlink{class_simulation_1_1_step_event_args}{StepEventArgs}} e);}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00022}\mbox{\hyperlink{class_simulation_1_1_world_ab5f6bc027915efa78e795ca1e17bdf8d}{00022}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_world_ab5f6bc027915efa78e795ca1e17bdf8d}{World}}()}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00023}00023         \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00024}00024             WorldObjects = \textcolor{keyword}{new} List<Object>();}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00030}\mbox{\hyperlink{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}{00030}}         \textcolor{keyword}{public} \textcolor{keyword}{event} \mbox{\hyperlink{class_simulation_1_1_world_a3c7ab5abe7c593ab673b7476c23c3b52}{StepEventHandler}} \mbox{\hyperlink{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}{Step}};}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00032}00032         \textcolor{keyword}{private} readonly List<Object> WorldObjects;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00038}\mbox{\hyperlink{class_simulation_1_1_world_afe0a8ded5e02bd2141238d265ac92243}{00038}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_world_afe0a8ded5e02bd2141238d265ac92243}{DoStep}}(TimeSpan deltaTime)}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00039}00039         \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00040}00040             \mbox{\hyperlink{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}{Step}}?.Invoke(\textcolor{keyword}{this}, \textcolor{keyword}{new} \mbox{\hyperlink{class_simulation_1_1_step_event_args}{StepEventArgs}}() \{ DeltaTime = deltaTime \});}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00043}\mbox{\hyperlink{class_simulation_1_1_world_aa1b0b80af037cedf67a54aad624a9199}{00043}}         \textcolor{keyword}{public} \textcolor{keywordtype}{object} \mbox{\hyperlink{class_simulation_1_1_world_aa1b0b80af037cedf67a54aad624a9199}{Clone}}()}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00044}00044         \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00045}00045             \mbox{\hyperlink{class_simulation_1_1_world}{World}} clone = \textcolor{keyword}{new} \mbox{\hyperlink{class_simulation_1_1_world_ab5f6bc027915efa78e795ca1e17bdf8d}{World}}();}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00046}00046             WorldObjects.ForEach(obj => obj.CloneToWorld(clone));}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00047}00047             \textcolor{keywordflow}{return} clone;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00055}\mbox{\hyperlink{class_simulation_1_1_world_a2df0b32df6703dadf69d404f54f6d3aa}{00055}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_world_a2df0b32df6703dadf69d404f54f6d3aa}{FindObject}}(Guid \textcolor{keywordtype}{id}) => WorldObjects.Find(x => x.ID.Equals(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00061}\mbox{\hyperlink{class_simulation_1_1_world_a28f3775efd6d361cb26d5ead6b75e161}{00061}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_world_a28f3775efd6d361cb26d5ead6b75e161}{GetObjectByIndex}}(\textcolor{keywordtype}{int} index) => WorldObjects[index];}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00066}\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{00066}}         \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00067}00067         \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00073}\mbox{\hyperlink{class_simulation_1_1_world_1_1_object_afb89df7e245f91e69f04a6aaaae6526d}{00073}}             \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_afb89df7e245f91e69f04a6aaaae6526d}{Object}}(\mbox{\hyperlink{class_simulation_1_1_world}{World}} world, Vector2 location)}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00074}00074             \{}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00075}00075                 world.\mbox{\hyperlink{class_simulation_1_1_world_a87ff0791dad38675038026036b081da6}{Step}} += \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}{Step}};}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00076}00076                 world.WorldObjects.Add(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00077}00077                 \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}{Location}} = location;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00078}00078                 \textcolor{keywordtype}{id} = Guid.NewGuid();}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00079}00079             \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00084}\mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}{00084}}             \textcolor{keyword}{public} Vector2 \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}{Location}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00086}00086             \textcolor{keyword}{private} Guid id;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00091}\mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a2ad636976b7f1b5ed473ffe864105b8d}{00091}}             \textcolor{keyword}{public} Guid \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a2ad636976b7f1b5ed473ffe864105b8d}{ID}} => id;}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00098}\mbox{\hyperlink{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}{00098}}             \textcolor{keyword}{protected} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_add51eb36bf203ebe11f7be7d55f81ffd}{Step}}(\textcolor{keywordtype}{object} sender, \mbox{\hyperlink{class_simulation_1_1_step_event_args}{StepEventArgs}} e);}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00105}\mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a8ebac64bd7f0992c1e95e2d527ee43f7}{00105}}             \textcolor{keyword}{public} \textcolor{keyword}{abstract} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a8ebac64bd7f0992c1e95e2d527ee43f7}{CloneToWorld}}(\mbox{\hyperlink{class_simulation_1_1_world}{World}} world);}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00106}00106         \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00107}00107     \}}
+\DoxyCodeLine{\Hypertarget{_world_8cs_source_l00108}00108 \}}
+
+\end{DoxyCode}

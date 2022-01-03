@@ -1,0 +1,52 @@
+\hypertarget{_simulation_8cs_source}{}\doxysection{Simulation.\+cs}
+\mbox{\hyperlink{_simulation_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00008}\mbox{\hyperlink{class_simulation_1_1_simulation}{00008}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{namespace_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00009}00009     \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00015}\mbox{\hyperlink{class_simulation_1_1_simulation_a44f07a4d13ed802f9e662c349a9df282}{00015}}         \textcolor{keyword}{public} delegate \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_simulation_a44f07a4d13ed802f9e662c349a9df282}{SteppedEventHandler}}(\textcolor{keywordtype}{object} sender, \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{SteppedEventArgs}} e);}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00017}\mbox{\hyperlink{class_simulation_1_1_simulation_abf433214b346eb1c6b368ab09f68171e}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_simulation_abf433214b346eb1c6b368ab09f68171e}{Simulation}}(\mbox{\hyperlink{class_simulation_1_1_world}{World}} world)}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00019}00019             this.world = world;}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00020}00020         \}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00022}\mbox{\hyperlink{class_simulation_1_1_simulation_a6794b9e6a67e5a13112d640849026ff5}{00022}}         \textcolor{keyword}{public} \textcolor{keyword}{event} SteppedEventHandler \mbox{\hyperlink{class_simulation_1_1_simulation_a6794b9e6a67e5a13112d640849026ff5}{Stepped}};}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00024}\mbox{\hyperlink{class_simulation_1_1_simulation_a7dfe32d990b56659caef2c1f6b9ddeb6}{00024}}         \textcolor{keyword}{protected} \mbox{\hyperlink{class_simulation_1_1_world}{World}} \mbox{\hyperlink{class_simulation_1_1_simulation_a7dfe32d990b56659caef2c1f6b9ddeb6}{world}};}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00026}00026         \textcolor{keyword}{private} \textcolor{keywordtype}{bool} cancellationRequested = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00028}\mbox{\hyperlink{class_simulation_1_1_simulation_a03e2562d03e84ed57e94f49e175e31ac}{00028}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_simulation_a03e2562d03e84ed57e94f49e175e31ac}{StopSimulation}}() => cancellationRequested = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00030}\mbox{\hyperlink{class_simulation_1_1_simulation_a0f5aea5fa2671fe42de8938ad597d9a4}{00030}}         \textcolor{keyword}{public} TimeSpan TimeSinceEpoch \{ \textcolor{keyword}{get}; \textcolor{keyword}{protected} \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00032}\mbox{\hyperlink{class_simulation_1_1_simulation_a71a97f17560b730b9d7d438a11610640}{00032}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_simulation_a71a97f17560b730b9d7d438a11610640}{Simulate}}()}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00033}00033         \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00034}00034             \textcolor{comment}{// First step (before updating any world objects)}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00035}00035             HandleStepped();}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00037}00037             \textcolor{keywordflow}{while} (!cancellationRequested)}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00038}00038             \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00039}00039                 DoStep();}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00040}00040                 HandleStepped();}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00041}00041             \}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00042}00042         \}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00044}00044         \textcolor{keyword}{private} \textcolor{keywordtype}{void} HandleStepped()}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00045}00045         \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00046}00046             Stepped?.Invoke(\textcolor{keyword}{this}, \textcolor{keyword}{new} \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{SteppedEventArgs}}()}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00047}00047             \{}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00048}00048                 WorldSnapshot = world.\mbox{\hyperlink{class_simulation_1_1_world_aa1b0b80af037cedf67a54aad624a9199}{Clone}}() as \mbox{\hyperlink{class_simulation_1_1_world}{World}},}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00049}00049                 TimeSinceEpoch = TimeSinceEpoch}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00050}00050             \});}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00051}00051         \}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00053}\mbox{\hyperlink{class_simulation_1_1_simulation_adff3843c245cf1784d8e31f05dcabebb}{00053}}         \textcolor{keyword}{protected} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_simulation_adff3843c245cf1784d8e31f05dcabebb}{DoStep}}();}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{_simulation_8cs_source_l00055}00055 \}}
+
+\end{DoxyCode}

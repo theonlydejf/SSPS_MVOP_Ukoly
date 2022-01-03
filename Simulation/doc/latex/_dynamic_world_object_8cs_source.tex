@@ -1,0 +1,53 @@
+\hypertarget{_dynamic_world_object_8cs_source}{}\doxysection{Dynamic\+World\+Object.\+cs}
+\mbox{\hyperlink{_dynamic_world_object_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Numerics;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00004}00004 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_simulation}{Simulation}}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00009}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{DynamicWorldPoint}} : \mbox{\hyperlink{class_simulation_1_1_world}{World}}.Object}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00017}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_ac5e35676a17a44de62f64bfc4f06f9c1}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_ac5e35676a17a44de62f64bfc4f06f9c1}{DynamicWorldPoint}}(\mbox{\hyperlink{class_simulation_1_1_world}{World}} world, Vector2 location, \textcolor{keywordtype}{float} mass) : this(world, location, mass, new Vector2(0))}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00019}00019         \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00028}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a575612461df2e95732d90a7f23592a6d}{00028}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a575612461df2e95732d90a7f23592a6d}{DynamicWorldPoint}}(\mbox{\hyperlink{class_simulation_1_1_world}{World}} world, Vector2 location, \textcolor{keywordtype}{float} mass, Vector2 velocity) : base(world, location)}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00029}00029         \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00030}00030             \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}} = velocity;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00031}00031             \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}} = mass;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00037}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{00037}}         \textcolor{keyword}{public} Vector2 \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00041}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{00041}}         \textcolor{keyword}{public} Vector2 \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00045}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{00045}}         \textcolor{keyword}{public} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00050}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a4ce40dc62ea92d54de907963c3327f17}{00050}}         \textcolor{keyword}{public} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a4ce40dc62ea92d54de907963c3327f17}{Speed}} => \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}}.Length();}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00054}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8bd7471eb835e89f06519541d0a9800c}{00054}}         \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8bd7471eb835e89f06519541d0a9800c}{Direction}} => Math.Atan2(\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}}.Y, \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}}.X);}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00060}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a7d32f665733ca563192ce5b61768765d}{00060}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a7d32f665733ca563192ce5b61768765d}{StartApplyingForce}}(Vector2 force)}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00061}00061         \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00062}00062             \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} += force / \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}};}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00068}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a9250fc5d0330558ed495360790a2b6cb}{00068}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a9250fc5d0330558ed495360790a2b6cb}{StopApplyingForce}}()}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00069}00069         \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00070}00070             \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} = \textcolor{keyword}{new} Vector2(0);}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00071}00071         \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00073}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a82c257cf082aad31a257efbfafe4a92d}{00073}}         \textcolor{keyword}{public} \textcolor{keyword}{override} \mbox{\hyperlink{class_simulation_1_1_world}{World}}.\mbox{\hyperlink{class_simulation_1_1_world_1_1_object}{Object}} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a82c257cf082aad31a257efbfafe4a92d}{CloneToWorld}}(\mbox{\hyperlink{class_simulation_1_1_world}{World}} world)}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00074}00074         \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00075}00075             \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point}{DynamicWorldPoint}} clone = \textcolor{keyword}{new} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_ac5e35676a17a44de62f64bfc4f06f9c1}{DynamicWorldPoint}}(world, \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}{Location}}, \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a5d73d316b2c049c1f3d8ea0ee0d282ef}{Mass}}, \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}});}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00076}00076             clone.\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} = \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}};}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00077}00077             \textcolor{keywordflow}{return} clone;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00078}00078         \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00080}\mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aa7346fe436980e5235b53fa49a353b1e}{00080}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aa7346fe436980e5235b53fa49a353b1e}{Step}}(\textcolor{keywordtype}{object} sender, \mbox{\hyperlink{class_simulation_1_1_step_event_args}{StepEventArgs}} e)}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00081}00081         \{}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00082}00082             \mbox{\hyperlink{class_simulation_1_1_world_1_1_object_a585f71a77c22232a591fe5f3fdabcc94}{Location}} += \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}} * (float)e.\mbox{\hyperlink{class_simulation_1_1_step_event_args_aab0b5dd9694fe02700954a4adde06543}{DeltaTime}}.TotalSeconds;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00083}00083             \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_a8d6a55bd1406118f870f25b9b8556757}{Velocity}} += \mbox{\hyperlink{class_simulation_1_1_dynamic_world_point_aad5acc9d71476611b006ed23303531d6}{Acceleration}} * (\textcolor{keywordtype}{float})e.\mbox{\hyperlink{class_simulation_1_1_step_event_args_aab0b5dd9694fe02700954a4adde06543}{DeltaTime}}.TotalSeconds;}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00084}00084         \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{_dynamic_world_object_8cs_source_l00086}00086 \}}
+
+\end{DoxyCode}

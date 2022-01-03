@@ -1,0 +1,93 @@
+\hypertarget{class_simulation_1_1_simulation_watcher}{}\doxysection{Simulation.\+Simulation\+Watcher Class Reference}
+\label{class_simulation_1_1_simulation_watcher}\index{Simulation.SimulationWatcher@{Simulation.SimulationWatcher}}
+
+
+Abstract class used to define so called watchers. Watchers are objects that can analyze a world every simulation step. For example a watcher can look for a closest encounter of two objects.  
+
+
+Inheritance diagram for Simulation.\+Simulation\+Watcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_simulation_1_1_simulation_watcher}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ab22c65bc3219b6be20179987cf413699}{Simulation\+Watcher}} (\mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}} simulation)
+\begin{DoxyCompactList}\small\item\em Creates an instance of watcher, that analyzes a specific simulation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad900ee19baf68855706a970c02d2117e}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Releases the watcher from the simulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}{Simulation\+\_\+\+Stepped}} (object sender, \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{Stepped\+Event\+Args}} e)
+\begin{DoxyCompactList}\small\item\em Gets invoked after every step in the watched simulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class used to define so called watchers. Watchers are objects that can analyze a world every simulation step. For example a watcher can look for a closest encounter of two objects. 
+
+Definition at line \mbox{\hyperlink{_simulation_watcher_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_simulation_watcher_8cs_source}{Simulation\+Watcher.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_simulation_watcher_ab22c65bc3219b6be20179987cf413699}\label{class_simulation_1_1_simulation_watcher_ab22c65bc3219b6be20179987cf413699}} 
+\index{Simulation.SimulationWatcher@{Simulation.SimulationWatcher}!SimulationWatcher@{SimulationWatcher}}
+\index{SimulationWatcher@{SimulationWatcher}!Simulation.SimulationWatcher@{Simulation.SimulationWatcher}}
+\doxysubsubsection{\texorpdfstring{SimulationWatcher()}{SimulationWatcher()}}
+{\footnotesize\ttfamily Simulation.\+Simulation\+Watcher.\+Simulation\+Watcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}}}]{simulation }\end{DoxyParamCaption})}
+
+
+
+Creates an instance of watcher, that analyzes a specific simulation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulation} & Instance of \mbox{\hyperlink{class_simulation_1_1_simulation}{Simulation}}, that the watcher watches\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_simulation_watcher_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_simulation_watcher_8cs_source}{Simulation\+Watcher.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_1_1_simulation_watcher_ad900ee19baf68855706a970c02d2117e}\label{class_simulation_1_1_simulation_watcher_ad900ee19baf68855706a970c02d2117e}} 
+\index{Simulation.SimulationWatcher@{Simulation.SimulationWatcher}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Simulation.SimulationWatcher@{Simulation.SimulationWatcher}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Simulation.\+Simulation\+Watcher.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Releases the watcher from the simulation 
+
+\mbox{\Hypertarget{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}\label{class_simulation_1_1_simulation_watcher_ad31a772c7944a0e0802e2f90658f4030}} 
+\index{Simulation.SimulationWatcher@{Simulation.SimulationWatcher}!Simulation\_Stepped@{Simulation\_Stepped}}
+\index{Simulation\_Stepped@{Simulation\_Stepped}!Simulation.SimulationWatcher@{Simulation.SimulationWatcher}}
+\doxysubsubsection{\texorpdfstring{Simulation\_Stepped()}{Simulation\_Stepped()}}
+{\footnotesize\ttfamily abstract void Simulation.\+Simulation\+Watcher.\+Simulation\+\_\+\+Stepped (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{\mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{Stepped\+Event\+Args}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Gets invoked after every step in the watched simulation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Instance of the object that invoked the step\\
+\hline
+{\em e} & Instance of \mbox{\hyperlink{class_simulation_1_1_stepped_event_args}{Stepped\+Event\+Args}} describing the state of the simulated world after the step\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_simulation_1_1_closest_encounter_watcher_a6f4e02cf33229963c94399dd05a5809e}{Simulation.\+Closest\+Encounter\+Watcher}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_simulation_watcher_8cs}{Simulation\+Watcher.\+cs}}\end{DoxyCompactItemize}
