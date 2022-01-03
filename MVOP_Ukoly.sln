@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotMaze", "RobotMaze\Robo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation", "Simulation\Simulation.csproj", "{1160F7D7-C5D3-4331-B0E4-FE42A3228A36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinFipping", "CoinFipping\CoinFipping.csproj", "{6C725723-6C00-475D-B64C-1BEBC2729182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{1160F7D7-C5D3-4331-B0E4-FE42A3228A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1160F7D7-C5D3-4331-B0E4-FE42A3228A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1160F7D7-C5D3-4331-B0E4-FE42A3228A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C725723-6C00-475D-B64C-1BEBC2729182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C725723-6C00-475D-B64C-1BEBC2729182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C725723-6C00-475D-B64C-1BEBC2729182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C725723-6C00-475D-B64C-1BEBC2729182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
